@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Trang chủ | ShopTheThao</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            @{Html.RenderAction("HeaderTop", "MyConpoment");}
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+           @{Html.RenderAction("HeaderMiddle", "Myconpoment");}
+        </div><!--/header-middle-->
+        <!-- Modal thong bao-->
+        <div class="modal fade" id="myModalNoti" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog-login" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thông báo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="padding:5px 50px;">
+                            <img src="images/home/success.png" />
+                            <label style="padding-left:20px;font-size:18px;">... thành công</label>
+                        </div>
+
+                        <!-- /.box -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" style="background-color:#fe980f;color:white;">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal thong bao -->
+        <!-- Modal dang nhap-->
+        <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog-login" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Đăng nhập</h4>
+                        <p style="margin:0px;">Bạn chưa có tài khoản. Nhấn vào đây để <a href="">Đăng ký</a></p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p style="color:red;">Tài khoản hoặc mật khẩu chưa chính xác!</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="login-form">
+                                    <!--login form-->
+                                    <form action="#">
+                                        <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                            <label for="example-text-input" class="col-2 col-form-label">Tài khoản</label>
+                                            <div class="col-10">
+                                                <input class="form-control" type="text" placeholder="Tài khoản" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                            <label for="example-text-input" class="col-2 col-form-label">Mật khẩu</label>
+                                            <div class="col-10">
+                                                <input class="form-control" type="text" placeholder="Mật khẩu" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <span>
+                                            <input type="checkbox" class="checkbox">
+                                            Nhớ mật khẩu
+                                        </span>
+                                    </form>
+                                </div><!--/login form-->
+                            </div>
+                            </row>
+                        </div>
+                        <!-- /.box -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" style="background-color:#fe980f;color:white;">Đăng nhập</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal dang nhap -->
+        <!-- Modal dang ky-->
+        <div class="modal fade" id="myModalRes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog-res" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Đăng ký tài khoản</h4>
+                        <p style="margin:0px;">Bạn đã có tài khoản. Nhấn vào đây để <a href="">Đăng nhập</a></p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p style="color:red;">Số điện thoại không đúng</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="login-form row">
+                                    <!--login form-->
+                                    <form action="#">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Tài khoản</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Tài khoản" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Mật khẩu</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Mật khẩu" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Họ tên</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Họ tên" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Email</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Email" id="example-text-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Số điện thoại</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Số điện thoại" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Giới tính</label>
+                                                <div class="col-10">
+                                                    <label style="padding:7px;">
+                                                        <span>
+                                                            <input type="radio" class="checkbox">
+                                                            <label>Nam</label>
+                                                        </span>
+                                                    </label>
+                                                    <label style="padding:7px;">
+                                                        <span>
+                                                            <input type="radio" class="checkbox">
+                                                            <label>Nữ</label>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Ngày sinh</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="date" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Địa chỉ</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Địa chỉ" id="example-text-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <span>
+                                                <input type="checkbox" class="checkbox">
+                                                Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <a href> điều kiện sử dụng và chính sách của ShopTheThao.</a>
+                                            </span>
+                                        </div>
+
+                                    </form>
+                                </div><!--/login form-->
+                            </div>
+                            </row>
+                        </div>
+                        <!-- /.box -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" style="background-color:#fe980f;color:white;">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal dang ky -->
+        <!-- Modal giỏ hàng-->
+        <div class="modal fade" id="myModalCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modla-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Giỏ hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive cart_info">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <td class="image"><b>Sản phẩm/b></td>
+                                        <td class="description"></td>
+                                        <td class="price"><b>Giá</b></td>
+                                        <td class="quantity"><b>Số lượng</b></td>
+                                        <td class="total"><b>Tổng tiền</b></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="cart_product">
+                                            <a href=""><img src="images/cart/one.png" alt=""></a>
+                                        </td>
+                                        <td class="cart_description" style="padding-left:20px;">
+                                            <h4><a href="">Colorblock Scuba</a></h4>
+                                            <p>Web ID: 1089772</p>
+                                        </td>
+                                        <td class="cart_price">
+                                            <p>500.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_quantity">
+                                            <div class="cart_quantity_button">
+                                                <a class="cart_quantity_up" href=""> + </a>
+                                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                                <a class="cart_quantity_down" href=""> - </a>
+                                            </div>
+                                        </td>
+                                        <td class="cart_total">
+                                            <p class="cart_total_price">500.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_delete">
+                                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart_product">
+                                            <a href=""><img src="images/cart/two.png" alt=""></a>
+                                        </td>
+                                        <td class="cart_description" style="padding-left:20px;">
+                                            <h4><a href="">Colorblock Scuba</a></h4>
+                                            <p>Web ID: 1089772</p>
+                                        </td>
+                                        <td class="cart_price">
+                                            <p>500.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_quantity">
+                                            <div class="cart_quantity_button">
+                                                <a class="cart_quantity_up" href=""> + </a>
+                                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                                <a class="cart_quantity_down" href=""> - </a>
+                                            </div>
+                                        </td>
+                                        <td class="cart_total">
+                                            <p class="cart_total_price">500.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_delete">
+                                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart_product">
+                                            <a href=""><img src="images/cart/three.png" alt=""></a>
+                                        </td>
+                                        <td class="cart_description" style="padding-left:20px;">
+                                            <h4><a href="">Colorblock Scuba</a></h4>
+                                            <p>Web ID: 1089772</p>
+                                        </td>
+                                        <td class="cart_price">
+                                            <p>250.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_quantity">
+                                            <div class="cart_quantity_button">
+                                                <a class="cart_quantity_up" href=""> + </a>
+                                                <input class="cart_quantity_input" type="text" name="quantity" value="2" autocomplete="off" size="2">
+                                                <a class="cart_quantity_down" href=""> - </a>
+                                            </div>
+                                        </td>
+                                        <td class="cart_total">
+                                            <p class="cart_total_price">500.000 VNĐ</p>
+                                        </td>
+                                        <td class="cart_delete">
+                                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalFianlCart" style="background-color:#fe980f;color:white;disdisplay:none;">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal gio hang -->
+        <!-- Modal xac nhan thong tin giao hang-->
+        <div class="modal fade" id="myModalFinalCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Xác nhận thông tin mua hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p style="color:red;">Số điện thoại không đúng</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="login-form row">
+                                    <!--login form-->
+                                    <form action="#">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Họ tên</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Họ tên" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Email</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Email" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Số điện thoại</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Số điện thoại" id="example-text-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Ngày sinh</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="date" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Địa chỉ</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" type="text" placeholder="Địa chỉ" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" style="padding:0px 10px;margin-bottom:0px;">
+                                                <label for="example-text-input" class="col-2 col-form-label">Tổng tiền</label>
+                                                <div class="col-10">
+                                                    <p style="font-size:24px;color:#fe980f;"><b>1.450.000 VNĐ</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <span>
+                                                <input type="checkbox" class="checkbox">
+                                                Khi bạn nhấn Hoàn tất, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <a href> điều kiện sử dụng và chính sách của ShopTheThao.</a>
+                                            </span>
+                                        </div>
+
+                                    </form>
+                                </div><!--/login form-->
+                            </div>
+                            </row>
+                        </div>
+                        <!-- /.box -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" style="background-color:#fe980f;color:white;">Hoàn tất</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal xac nhan thong tin giao hang -->
+        <div class="header-bottom">
+            <!--header-bottom-->
+           @{Html.RenderAction("HeaderBottom", "MyConpoment"); }
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+    @RenderBody()
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>Shop</span>-thethao</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Giới thiệu</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Về Shopthethao</a></li>
+                                <li><a href="#">Chính sách và quy định</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Sơ đồ Website</a></li>
+                                <li><a href="#">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Trợ giúp</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                                <li><a href="#">Hướng dẫn thanh toán</a></li>
+                                <li><a href="#">Hướng dẫn đổi hàng</a></li>
+                                <li><a href="#">Quy trình xử lý khiếu nại</a></li>
+                                <li><a href="#">Tài khoản và đơn hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Khách hàng</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Đăng kí tài khoản</a></li>
+                                <li><a href="#">Đăng nhập</a></li>
+                                <li><a href="#">Bảo mật thông tin</a></li>
+                                <li><a href="#">Khuyến mãi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>Nhận thông báo</h2>
+                            <form action="#" class="searchform">
+                                <input type="text" placeholder="Xin vui lòng nhập Email" />
+                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2017 SHOP-THETHAO Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
