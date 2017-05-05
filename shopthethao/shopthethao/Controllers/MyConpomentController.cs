@@ -23,5 +23,15 @@ namespace shopthethao.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult FooterWidget()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult FooterBottom()
+        {
+            return PartialView();
+        }
     }
 }
