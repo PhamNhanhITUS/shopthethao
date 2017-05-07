@@ -9,13 +9,12 @@ namespace shopthethao
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/User/scripts").Include(
-                "~/Scripts/User/js/jquery.js",
-                "~/Scripts/User/js/bootstrap.min.js",
-                "~/Scripts/User/js/jquery.scrollUp.min.js",
-                "~/Scripts/User/js/price-range.js",
-                "~/Scripts/User/js/jquery.prettyPhoto.js",
-                "~/Scripts/User/js/main.js",
-                 "~/Scripts/User/js/npm.js"
+                "~/Content/User/js/jquery.js",
+                "~/Content/User/js/bootstrap.min.js",
+                "~/Content/User/js/jquery.scrollUp.min.js",
+                "~/Content/User/js/price-range.js",
+                "~/Content/User/js/jquery.prettyPhoto.js",
+                "~/Content/User/js/main.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/User/css").Include(
