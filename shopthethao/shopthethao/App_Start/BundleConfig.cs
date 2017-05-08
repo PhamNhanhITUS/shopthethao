@@ -14,6 +14,8 @@ namespace shopthethao
                 "~/Content/User/js/jquery.scrollUp.min.js",
                 "~/Content/User/js/price-range.js",
                 "~/Content/User/js/jquery.prettyPhoto.js",
+                "~/Content/User/js/validator.js",
+                "~/Content/User/js/validator.min.js",
                 "~/Content/User/js/main.js"
                 ));
 

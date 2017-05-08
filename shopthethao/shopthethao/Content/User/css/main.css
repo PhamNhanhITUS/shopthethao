@@ -1494,7 +1494,6 @@ h2.title {
 .login-form label input {
   border: medium none;
   display: inline-block;
-  height: 0;
   margin-bottom: 0;
   outline: medium none;
   padding-left: 0;

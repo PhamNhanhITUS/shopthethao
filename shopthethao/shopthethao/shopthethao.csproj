@@ -1211,6 +1211,8 @@
     <Content Include="Content\User\js\jquery.scrollUp.min.js" />
     <Content Include="Content\User\js\main.js" />
     <Content Include="Content\User\js\price-range.js" />
+    <Content Include="Content\User\js\validator.js" />
+    <Content Include="Content\User\js\validator.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
